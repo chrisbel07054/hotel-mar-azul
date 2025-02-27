@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import BlogModal from "../components/BlogModal";
 import { api } from '../service/apiService';
-import { toast } from 'react-hot-toast'; // Importa react-toastify
+import { toast } from 'react-hot-toast';
 
 export default function Blog() {
   const [selectedPost, setSelectedPost] = useState(null);
@@ -43,6 +43,7 @@ export default function Blog() {
     try {
       await api.notifications.subscriptionBlog({ email });
       toast.success('¡Suscripción exitosa!');
+      setEmail('')
     } catch (error) {
       toast.error('Error al suscribirse, por favor intenta de nuevo.');
     } finally {
