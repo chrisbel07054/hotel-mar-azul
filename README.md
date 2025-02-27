@@ -34,6 +34,7 @@ KEY_OPENWEATHERMAP=83fb232d4fab27a113e5e97e8b35f0c9
 ## Funcionalidades
 
 ### Interfaces
+- **Landing**: Promociones y servicios que motiven a los visitantes a realizar reservas o suscribirse a las ofertas exclusivas.
 - **Home**: Se encuentra el clima del sitio, menu de navegacion y enlace a testimonios.
 - **About**: Informacion e historia del hotel.
 - **Admin**: Visualización de las estadisticas del hotel.
@@ -67,7 +68,7 @@ KEY_OPENWEATHERMAP=83fb232d4fab27a113e5e97e8b35f0c9
 - **axios**: Solicitudes asincronas.
 
 ## Instrucciones de Uso
-
+1. **Landing Page**: Acceder a `http://localhost:5173` para visitar la Landing Page.
 1. **Inicio de Sesión**: Acceder a `http://localhost:5173/login` para iniciar sesión.
 2. **Credenciales de admin**: Autenticate con 'admin@test.com' y clave '123456'.
 3. **Roles y Permisos**:

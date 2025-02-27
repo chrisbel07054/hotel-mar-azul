@@ -12,22 +12,26 @@ import Login from "./pages/Login"
 import Testimonials from "./pages/Testimonials"
 import Register from "./pages/Register"
 import { AuthProvider } from "./contexts/AuthProvider"
+import LandingPage from "./pages/LadingPage";
 
 function App() {
   return (
     <AuthProvider>
       <Router>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/Register" element={<Register />} />
-            <Route path="/testimonials" element={<Testimonials />} />
+        <Routes>
+          <Route path='/' element={<LandingPage />} />
+
+          {/* Rutas con Layout */}
+          <Route element={<Layout />}>
+            <Route path='/home' element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/blog' element={<Blog />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
+            <Route path='/testimonials' element={<Testimonials />} />
             <Route
-              path="/booking"
+              path='/booking'
               element={
                 <PrivateRoute>
                   <Booking />
@@ -35,20 +39,19 @@ function App() {
               }
             />
             <Route
-              path="/admin"
+              path='/admin'
               element={
                 <PrivateRoute adminOnly>
                   <Admin />
                 </PrivateRoute>
               }
             />
-          </Routes>
-        </Layout>
-        <Toaster position="top-right" />
+          </Route>
+        </Routes>
+        <Toaster position='top-right' />
       </Router>
     </AuthProvider>
-  )
+  );
 }
 
-export default App
-
+export default App;
